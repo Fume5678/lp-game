@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4663850338720559267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5774171000616018302}
+  - component: {fileID: -2513581255007084635}
+  - component: {fileID: 6556073192931646489}
+  - component: {fileID: -4729841992845564506}
+  - component: {fileID: 2776417109880982264}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5774171000616018302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663850338720559267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &-2513581255007084635
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663850338720559267}
+  m_Mesh: {fileID: -2432090755550338912, guid: 9961286dd0c01774988d859f2c993e4b, type: 3}
+--- !u!23 &6556073192931646489
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663850338720559267}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 06afd966cb6bae64399d40baea5d4c93, type: 2}
+  - {fileID: 2100000, guid: 34b9c484a99dafd4cbc64fb88860d084, type: 2}
+  - {fileID: 2100000, guid: 6e239cb0c17ff2e48af779318321adaf, type: 2}
+  - {fileID: 2100000, guid: 442737b89ed452243b5e8640129e0fe7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4729841992845564506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663850338720559267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909a5ca4802cb8046aa6f47220554781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8164078558771037576, guid: 9961286dd0c01774988d859f2c993e4b, type: 3}
+  - {fileID: 8164078558771037576, guid: 06e347aeb83de5548bb8320e33418604, type: 3}
+  colors:
+  - {fileID: 2100000, guid: 8eeaaed8630df6043b6312cd2573e084, type: 2}
+  - {fileID: 2100000, guid: ce397f5c2a3dbc4438bac2e90528b623, type: 2}
+  - {fileID: 2100000, guid: e5a4528425d05da459ae3fee0a547639, type: 2}
+  - {fileID: 2100000, guid: 06afd966cb6bae64399d40baea5d4c93, type: 2}
+  - {fileID: 2100000, guid: 34b9c484a99dafd4cbc64fb88860d084, type: 2}
+  - {fileID: 2100000, guid: c71bff97db9ef6e49ada2b7655bbaeb7, type: 2}
+  - {fileID: 2100000, guid: a004a2a547d2fee43a74d8c5af274d6f, type: 2}
+--- !u!65 &2776417109880982264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663850338720559267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 2.678317, z: 9.933123}
+  m_Center: {x: -0.034594536, y: 1.1590774, z: 0.3030727}

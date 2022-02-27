@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6f8b00f98ae852438517c20b9b3293e
+guid: 1e90e91bf58908949a2ffb412b253162
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Street.001
+      name: House
     second: {fileID: 2100000, guid: c5a44a86c5352a046a954519000f50a1, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
+    materialName: 1
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
