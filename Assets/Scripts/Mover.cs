@@ -5,16 +5,17 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     public float speedMove = 0.1f;
-    float speed = 0.0f;
     bool isMoving = false;
     public float cameraSens = 0.1f;
     Vector3 direction;
     Vector3 lastMousePos;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Application.targetFrameRate = 60;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,49 +26,42 @@ public class Mover : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             direction.z = 1.0f;
-            speed += 0.03f;
             isMoving = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
             direction.z = -0.8f;
-            speed += 0.03f;
             isMoving = true;
         }
         if (Input.GetKey(KeyCode.A))
         {
             direction.x = -0.8f;
-            speed += 0.03f;
              isMoving = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             direction.x = 0.8f;
-            speed += 0.03f;
             isMoving = true;
         }
 
-        if(speed > speedMove){
-            speed = speedMove;
-        }
-        if(!isMoving){
-            speed = 0.0f;
-        }
 
-        transform.Translate(direction * speed / 10);
+        //rb.AddRelativeForce(direction * speedMove,  ForceMode.Force); 
+        //transform.Translate(direction * speedMove);
+        Vector3 moveBy = transform.right * direction.x + transform.forward * direction.z;
+        rb.MovePosition(transform.position + moveBy * speedMove * Time.deltaTime);
         CamRotate();
     }
 
-    // Update is called once per frame
     void CamRotate()
     {
-        float speed = 0;
+        float delta = 0;
 
         if (Input.GetAxis("Mouse X") != 0)
         {
             Vector3 mousePos = Input.mousePosition;
-            speed = mousePos.x - lastMousePos.x;
-            transform.Rotate(0, speed * cameraSens, 0);
+            delta = mousePos.x - lastMousePos.x;
+            transform.Rotate(new Vector3(0, delta * cameraSens, 0), Space.Self);
+            rb.velocity = rb.velocity.magnitude*transform.forward;
             lastMousePos = mousePos;
         }
     }
