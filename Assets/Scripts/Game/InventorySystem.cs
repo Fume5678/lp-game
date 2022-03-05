@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
+
+    private ArrayList<Item> inventory;
+    private Hashtable<long, Sprite> sprites;
+
+    private EquipPanel<Equipable> panel;
+    private Equipable hand;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadPanel();
     }
 
     // Update is called once per frame
@@ -15,4 +22,13 @@ public class InventorySystem : MonoBehaviour
     {
         
     }
+
+    void LoadInvetory(){
+
+    }
+
+    void LoadPanel(){
+        
+    }
+
 }
