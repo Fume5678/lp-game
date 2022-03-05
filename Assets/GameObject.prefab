@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2.5
+  loadPanel: {fileID: 2300680940489362156, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
 --- !u!65 &2776417109880982264
 BoxCollider:
   m_ObjectHideFlags: 0
