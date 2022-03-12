@@ -21,10 +21,7 @@ public class CarLooter : MonoBehaviour
         gear = gameObject.transform.Find("Gear").gameObject;
         gear.SetActive(false);
 
-        // Debug.Log(obj);
         loadLine = GameObject.Find("Canvas").transform.Find("LoadPanel").GetComponent<LoadLine>();
-        //loadLine.Start();
-        Debug.Log(loadLine);
     }
 
     // Update is called once per frame
