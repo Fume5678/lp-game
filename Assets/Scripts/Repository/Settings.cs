@@ -7,35 +7,71 @@ using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEditor;
 
-public class Settings{
+public class Settings : MonoBehaviour
+{
 
-    private Hashtable settingsTable = new Hashtable();
-    private static Settings instance;
+    private JObject settingsTable = new JObject();
+    public static Settings instance = null;
 
-    private Settings(){
-        string assetPath  = Application.dataPath + "/Assets/";
-        string dataPath  = Application.dataPath + "/Assets/Data/";
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        { // Экземпляр объекта уже существует на сцене
+            Destroy(gameObject); // Удаляем объект
+        }
 
-        settingsTable.Add("asset_path", assetPath);
-        settingsTable.Add("data_path", dataPath);
+        DontDestroyOnLoad(gameObject);
 
-        string contents = File.ReadAllText(dataPath + "settings.json");
+        // И запускаем собственно инициализатор
+        InitializeManager();
+    }
+
+    // Метод инициализации менеджера
+    private void InitializeManager()
+    {
+        string assetPath = Application.dataPath + "/";
+        string dataPath = Application.dataPath + "/Data/";
+
+        settingsTable["asset_path"] = assetPath;
+        settingsTable["data_path"] = dataPath;
+
+        string contents = "";
+        using (StreamReader file = new StreamReader(dataPath + "settings.json"))
+        {
+            string ln;
+
+            while ((ln = file.ReadLine()) != null)
+            {
+                contents += ln + "\n";
+            }
+            file.Close();
+        }
         JObject stuff = JObject.Parse(contents);
-        Debug.Log(stuff);
+        Debug.Log("contents: " + contents);
+        Debug.Log("stuff: " + stuff["lang"]);
+
+        string json = stuff.ToString(Newtonsoft.Json.Formatting.None);
+        settingsTable.Add(new JProperty(json, new JObject()));
+
+        Debug.Log("1: " + json);
+
+
+        // TODO: реализовать систему слкадывания json объектов
+        json = settingsTable.ToString(Newtonsoft.Json.Formatting.None);
+        Debug.Log("2" + json);
 
         Debug.Log(assetPath);
     }
-    
-    public static Settings GetInstance(){
-        if(instance == null){
-            instance = new Settings();
-        }
 
-        return instance;
-    }
 
-    public string GetValue(string key){
-        if(settingsTable.Contains(key)){
+    public string GetValue(string key)
+    {
+        if (settingsTable[key] != null)
+        {
             return settingsTable[key].ToString();
         }
 

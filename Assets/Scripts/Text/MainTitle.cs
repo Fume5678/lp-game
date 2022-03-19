@@ -6,17 +6,30 @@ public class MainTitle : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private TextLoader textLoader = TextLoader.GetInstance();
+    // private TextLoader textLoader = TextLoader.instance;
+
+    private bool first_render = true;
 
     void Start()
     {
-        var text = gameObject.GetComponent(typeof(UnityEngine.UI.Text));
-        Debug.Log(text.ToString());
+
+        Debug.Log("Main Title: " + TextLoader.instance.ToString());
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (first_render)
+        {
+            FirstRender();
+        }
+    }
+
+    void FirstRender()
+    {
         
+
+        first_render = true;
     }
 }
