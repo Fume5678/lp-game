@@ -13,7 +13,7 @@ public class MainTitle : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("Main Title: " + TextLoader.instance.ToString());
+        //Debug.Log("Main Title: " + TextLoader.instance.ToString());
 
     }
 
