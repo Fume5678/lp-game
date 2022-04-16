@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 218239326}
   - component: {fileID: 218239325}
   - component: {fileID: 218239324}
+  - component: {fileID: 218239327}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -562,6 +563,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218239327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218239323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab45f60c7354f346a9f7351708504f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &286836396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,10 +2725,10 @@ RectTransform:
   m_Father: {fileID: 686930732}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10.03125, y: -331.6914}
-  m_SizeDelta: {x: -1052.9453, y: -803.1638}
+  m_SizeDelta: {x: 467.0547, y: 52.83618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717452720
 MonoBehaviour:
@@ -3390,27 +3403,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1052.9453
+      value: 467.0547
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -803.1638
+      value: 52.83618
       objectReference: {fileID: 0}
     - target: {fileID: 2300680940489362157, guid: 8f80a9e45dfbd3e449de6cacdd0183fa, type: 3}
       propertyPath: m_LocalScale.y
@@ -3578,5 +3591,7 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: af4100c494582844991af006a811b74f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2814058104249879814, guid: bac468e5a1877c24990566ff48ef67de, type: 3}
+    - {fileID: 6154034827295338407, guid: bac468e5a1877c24990566ff48ef67de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bac468e5a1877c24990566ff48ef67de, type: 3}

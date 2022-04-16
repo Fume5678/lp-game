@@ -1,5 +1,56 @@
 {
-    "items":{
-        "id": 0,
-    }
+    "items": [
+        {
+            "id": 100001,
+            "type": "booster",
+            "effects": [
+                {
+                    "target": "hp",
+                    "value": 10,
+                    "time": -1
+                }
+            ]
+        },
+        {
+            "id": 100002,
+            "type": "booster",
+            "effects": [
+                {
+                    "target": "hp",
+                    "value": 10,
+                    "time": -1
+                }
+            ]
+        },
+        {   "id": 100003,
+            "type": "booster",
+            "effects": [
+                {
+                    "target": "hp",
+                    "value": 10,
+                    "time": -1
+                }
+            ]
+        },
+        {   "id": 100004,
+            "type": "booster",
+            "effects": [
+                {
+                    "target": "hp",
+                    "value": 10,
+                    "time": -1
+                }
+            ]
+        },
+        {   "id": 100005,
+            "type": "booster",
+            "effects": [
+                {
+                    "target": "hp",
+                    "value": 10,
+                    "time": -1
+                }
+            ]
+        }
+    ]
 }
